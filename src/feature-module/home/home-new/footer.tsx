@@ -81,7 +81,7 @@ const NewFooter = () => {
                     <Link to={all_routes.damagePolicy}>Damage Policy</Link>
                   </li>
                   <li>
-                    <Link to={all_routes.faq}>FAQs</Link>
+                    <Link to={all_routes.privacyPolicy}>Privacy Policy</Link>
                   </li>
                 </ul>
               </div>
