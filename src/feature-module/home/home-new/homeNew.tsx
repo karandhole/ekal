@@ -15,8 +15,8 @@ import { carAPI } from '../../../api/user/car.api';
 import { getCarDayRate } from '../../../utils/carPricing';
 import { img_path } from '../../../environment';
 
-const API_IMAGE_BASE =
-  import.meta.env.VITE_API_BASE_URL_IMAGE || "http://localhost:4000";
+const API_IMAGE_BASE ="https://api.ekalodrive.com";
+  // import.meta.env.VITE_API_BASE_URL_IMAGE || "http://localhost:4000";
 
 function formatTransmission(t: string) {
   const map: Record<string, string> = {
