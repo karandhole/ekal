@@ -65,7 +65,7 @@ const ReservationsList = () => {
       if (!token) return;
       try {
         setLoading(true);
-        const res = await axios.get("http://localhost:4000/api/car-partner/bookings", {
+        const res = await axios.get("https://api.ekalodrive.com/api/car-partner/bookings", {
           headers: { Authorization: `Bearer ${token}` }
         });
         
@@ -150,7 +150,7 @@ const ReservationsList = () => {
             className="avatar me-2 flex-shrink-0"
           >
             <img
-              src={`http://localhost:4000${record.CAR_IMG}`}
+              src={`https://api.ekalodrive.com${record.CAR_IMG}`}
               onError={(e:any) => e.target.src = "assets/admin/img/car/car-01.jpg"}
               alt="car"
             />

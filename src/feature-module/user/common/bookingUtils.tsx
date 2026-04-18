@@ -16,7 +16,7 @@ export const formatBooking = (booking: any) => ({
   originalId: booking.id,
   carName: booking.car?.name || "Unknown Car",
   img: booking.car?.images?.[0]
-    ? `http://localhost:4000${booking.car.images[0]}`
+    ? `https://api.ekalodrive.com${booking.car.images[0]}`
     : "assets/img/cars/car-05.jpg",
   deliveryStatus:
     booking.bookingType === "DELIVERY" ? "Delivery" : "Self Pickup",
@@ -216,7 +216,7 @@ export const ExtendBookingModal = ({
     setSubmitting(true);
     try {
       const res = await axios.patch(
-        `http://localhost:4000/api/bookings/${booking.id}/extend`,
+        `https://api.ekalodrive.com/api/bookings/${booking.id}/extend`,
         { userId, returnDate: newEnd.toISOString() },
         { headers: { Authorization: `Bearer ${getAccessToken()}` } }
       );
@@ -355,7 +355,7 @@ export const BookingModal = ({
                   <img
                     src={
                       booking.car?.images?.[0]
-                        ? `http://localhost:4000${booking.car.images[0]}`
+                        ? `https://api.ekalodrive.com${booking.car.images[0]}`
                         : "assets/img/cars/car-05.jpg"
                     }
                     alt="car"

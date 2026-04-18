@@ -24,7 +24,7 @@ const ReservationDetails = () => {
       if (!token || !id) return;
       try {
         setLoading(true);
-        const res = await axios.get(`http://localhost:4000/api/car-partner/bookings/${id}`, {
+        const res = await axios.get(`https://api.ekalodrive.com/api/car-partner/bookings/${id}`, {
           headers: { Authorization: `Bearer ${token}` }
         });
         setBooking(res.data);
@@ -121,7 +121,7 @@ const ReservationDetails = () => {
                           <div className="d-flex align-items-center">
                             <span className="avatar flex-shrink-0 me-2">
                                <img
-                                  src={`http://localhost:4000${car.images?.[0]}`}
+                                  src={`https://api.ekalodrive.com${car.images?.[0]}`}
                                   onError={(e:any) => e.target.src = "assets/admin/img/car/car-01.jpg"}
                                   alt="car"
                                 />

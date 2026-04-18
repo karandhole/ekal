@@ -16,7 +16,7 @@ const getAccessToken = () => {
 
 const apiBase =
   (import.meta as unknown as { env?: { VITE_API_BASE_URL?: string } }).env?.VITE_API_BASE_URL ||
-  "http://localhost:4000";
+  "https://api.ekalodrive.com";
 
 const BookingSuccess = () => {
   const bookingData = useSelector((state: any) => state.checkout.bookingData);
@@ -88,7 +88,7 @@ const BookingSuccess = () => {
             <div className="booking-header">
               <div className="booking-img-wrap">
                 <div className="book-img">
-                  <img src={`http://localhost:4000${checkoutData.car?.images[0]}`} alt="img" />
+                  <img src={`https://api.ekalodrive.com${checkoutData.car?.images[0]}`} alt="img" />
                 </div>
                 <div className="book-info">
                   <h6>{checkoutData.car?.name}</h6>

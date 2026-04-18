@@ -8,7 +8,7 @@ import { getCarDayRate } from "../../utils/carPricing";
 import { buildCarGalleryImagePaths } from "../../utils/carGalleryImages";
 
 const CAR_IMAGE_BASE =
-  import.meta.env.VITE_API_BASE_URL_IMAGE || "http://localhost:4000";
+  import.meta.env.VITE_API_BASE_URL_IMAGE || "https://api.ekalodrive.com";
 
 function formatEnum(val: string | undefined | null) {
   if (!val) return "—";

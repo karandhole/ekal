@@ -96,7 +96,7 @@ const EditCar = () => {
 
     const imageBaseUrl = useMemo(() => {
         const base = (import.meta as any)?.env?.VITE_API_BASE_URL_IMAGE;
-        return typeof base === "string" ? base.replace(/\/$/, "") : "http://localhost:4000";
+        return typeof base === "string" ? base.replace(/\/$/, "") : "https://api.ekalodrive.com";
     }, []);
 
     const getImageUrl = (path: string | null | undefined): string => {

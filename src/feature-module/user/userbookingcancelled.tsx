@@ -36,7 +36,7 @@ const UserBookingCancelled = () => {
         if (!userId) return;
         setLoading(true);
         const res = await axios.get(
-          `http://localhost:4000/api/bookings/user/${userId}`,
+          `https://api.ekalodrive.com/api/bookings/user/${userId}`,
           { headers: { Authorization: `Bearer ${getAccessToken()}` } }
         );
         const formatted = res.data

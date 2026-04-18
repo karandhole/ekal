@@ -30,7 +30,7 @@ const UserPayment = () => {
         if (!userId) return;
         setLoading(true);
         const res = await axios.get(
-          `http://localhost:4000/api/payment/by-user/${userId}`,
+          `https://api.ekalodrive.com/api/payment/by-user/${userId}`,
           { headers: { Authorization: `Bearer ${getAccessToken()}` } }
         );
         setPayments(res.data || []);
@@ -110,7 +110,7 @@ const UserPayment = () => {
     try {
       const token = getAccessToken();
       const res = await axios.get(
-        `http://localhost:4000/api/payment/booking/${selectedPayment.bookingId}/invoice?gst=0`,
+        `https://api.ekalodrive.com/api/payment/booking/${selectedPayment.bookingId}/invoice?gst=0`,
         {
           headers: { Authorization: `Bearer ${token}` },
           responseType: "blob",

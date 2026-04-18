@@ -55,7 +55,7 @@ const BookingPayment = () => {
 
       // ── STEP 1: Create Razorpay order ────────────────────────────────────
       const orderRes = await fetch(
-        "http://localhost:4000/api/payment/create-order",
+        "https://api.ekalodrive.com/api/payment/create-order",
         {
           method: "POST",
           headers: {
@@ -110,7 +110,7 @@ const BookingPayment = () => {
 
             // ── STEP 4: Verify payment signature & persist Payment record ──
             const verifyRes = await fetch(
-              "http://localhost:4000/api/payment/verify-payment",
+              "https://api.ekalodrive.com/api/payment/verify-payment",
               {
                 method: "POST",
                 headers: {
@@ -339,7 +339,7 @@ const BookingPayment = () => {
                               {bookingData?.car?.images?.[0] && (
                                 <span className="car-img">
                                   <img
-                                    src={`http://localhost:4000${bookingData.car.images[0]}`}
+                                    src={`https://api.ekalodrive.com${bookingData.car.images[0]}`}
                                     className="img-fluid"
                                     alt="Car"
                                   />

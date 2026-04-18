@@ -38,7 +38,7 @@ const UserDashboard = () => {
         if (!userId) return;
         setLoading(true);
         const res = await axios.get(
-          `http://localhost:4000/api/bookings/user/${userId}/stats`,
+          `https://api.ekalodrive.com/api/bookings/user/${userId}/stats`,
           { headers: { Authorization: `Bearer ${getAccessToken()}` } }
         );
         setStats(res.data);
@@ -52,7 +52,7 @@ const UserDashboard = () => {
   }, [userInfo]);
 
   const getCarImg = (car: any) => {
-    if (car?.images?.[0]) return `http://localhost:4000${car.images[0]}`;
+    if (car?.images?.[0]) return `https://api.ekalodrive.com${car.images[0]}`;
     return "assets/img/cars/car-01.jpg";
   };
 

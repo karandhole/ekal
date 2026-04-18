@@ -15,7 +15,7 @@ export const createBooking = createAsyncThunk(
   "checkout/createBooking",
   async (bookingData: any, thunkAPI) => {
     try {
-      const res = await axios.post("http://localhost:4000/api/bookings", bookingData, {
+      const res = await axios.post("https://api.ekalodrive.com/api/bookings", bookingData, {
         headers: {
           Authorization: `Bearer ${getAccessToken()}`,
         },

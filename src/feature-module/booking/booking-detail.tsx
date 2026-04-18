@@ -13,7 +13,7 @@ import { RentalBreakdownLines } from "./rentalBreakdownLines";
 const UPLOAD_API_ORIGIN = (
   import.meta.env.VITE_API_BASE_URL_IMAGE ||
   import.meta.env.VITE_API_BASE_URL ||
-  "http://localhost:4000"
+  "https://api.ekalodrive.com"
 ).replace(/\/$/, "");
 
 function resolveUploadDocHref(pathOrUrl: string | null | undefined): string | null {
@@ -710,7 +710,7 @@ const BookingDetail = () => {
                             <div className="booking-car-detail">
                               <span className="car-img">
                                 <img
-                                  src={`http://localhost:4000${checkoutData?.car?.images[0]}`}
+                                  src={`https://api.ekalodrive.com${checkoutData?.car?.images[0]}`}
                                   className="img-fluid"
                                   alt="Car"
                                 />

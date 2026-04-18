@@ -926,8 +926,14 @@ const BookingCheckout = () => {
                           <div className="booking-sidebar-body">
                             <div className="booking-car-detail">
                               <span className="car-img">
-                                <img
+                                
+                                {/* <img
                                   src={`http://localhost:4000${bookingData?.car?.images[0]}`}
+                                  className="img-fluid"
+                                  alt="Car"
+                                /> */}
+                                <img
+                                  src={`https://api.ekalodrive.com${bookingData?.car?.images[0]}`}
                                   className="img-fluid"
                                   alt="Car"
                                 />

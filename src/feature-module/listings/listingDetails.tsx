@@ -35,7 +35,7 @@ import { img_path } from "../../environment";
 import { buildCarGalleryImagePaths } from "../../utils/carGalleryImages";
 
 const CAR_IMAGE_BASE =
-  import.meta.env.VITE_API_BASE_URL_IMAGE || "http://localhost:4000";
+  import.meta.env.VITE_API_BASE_URL_IMAGE || "https://api.ekalodrive.com";
 
 const LISTING_GALLERY_FALLBACK = `${img_path}assets/img/cars/slider-01.jpg`;
 

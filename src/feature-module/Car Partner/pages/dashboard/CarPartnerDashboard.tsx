@@ -7,7 +7,8 @@ import ReactApexChart from "react-apexcharts";
 import axios from "axios";
 import Cookies from "js-cookie";
 
-const API_BASE = "http://localhost:4000";
+// const API_BASE = "http://localhost:4000";
+const API_BASE = "https://api.ekalodrive.com";
 
 const statusColors: Record<string, string> = {
   COMPLETED: "bg-success-transparent",
