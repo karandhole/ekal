@@ -25,7 +25,7 @@ const AMENITY_OPTIONS = [
 const CAR_TYPES   = ["Sedan", "Hatchback", "SUV", "Coupes"];
 const FUELS       = ["Petrol", "Diesel", "Electric", "CNG", "Hybrid"];
 const TRANSMISSIONS = ["Automatic", "Semi-Automatic", "Manual"];
-const LOCATIONS   = ["Johnson Dealer Zone", "Miller Auto Trade Zone", "Thompson Dealer Parking"];
+const LOCATIONS   = ["Ekalo Drive - Pune"];
 
 const EditCar = () => {
     const navigate = useNavigate();

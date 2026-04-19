@@ -212,9 +212,9 @@ export const Transmission = [
   { label: 'Manual', value: '3' },
 ];
 export const MainLocation = [
-  { label: 'Johnson Dealer Zone', value: '1' },
-  { label: 'Miller Auto Trade Zone', value: '2' },
-  { label: 'Thompson Dealer Parking', value: '3' },
+  { label: 'Ekalo Drive - Pune', value: '1' },
+  // { label: 'Miller Auto Trade Zone', value: '2' },
+  // { label: 'Thompson Dealer Parking', value: '3' },
 ];
  
 export const DrivingType = [
