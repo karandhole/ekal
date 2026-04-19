@@ -1,7 +1,8 @@
-import React from 'react';
-import { img_path } from '../../../environment'
+// 
+import React from "react";
+import { img_path } from "../../../environment";
 
-interface Image {
+interface ImageProps {
   className?: string;
   src: string;
   alt?: string;
@@ -11,9 +12,12 @@ interface Image {
   style?: React.CSSProperties;
 }
 
-const ImageWithBasePath = (props: Image) => {
-  // Combine the base path and the provided src to create the full image source URL
-  const fullSrc = `${img_path}${props.src}`;
+const ImageWithBasePath = (props: ImageProps) => {
+  // ✅ If src is already a full URL, don't prepend img_path
+  const fullSrc = props.src.startsWith("http")
+    ? props.src
+    : `${img_path}${props.src}`;
+
   return (
     <img
       className={props.className}
